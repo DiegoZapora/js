@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salamaleco</title>
+    <style>
+        div#samp {
+            font: normal 10pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'samp'>
+    Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('samp')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        
+        function clicar(){
+            a.innerText = 'Voce perdeu sua essência'
+            a.style.background = 'red'
+            a.style.color = 'black'
+        }
+        function entrou(){
+            a.innerText = 'Nao clique'
+        }
+        function saiu(){
+            a.innerText = 'Bom mesmo!'
+            a.style.background = 'green'
+            a.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Matos</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Seu pais de origem: <input type="text" name="viper" id="viper">
+    <input type="button" value="Verificar" onclick="angra()">
+    <div id="virgo">
+
+    </div>
+    <script>
+        function angra() {
+        var shaman = document.getElementById('viper')
+        var virgo = document.querySelector('div#virgo')
+        var time = shaman.value
+        virgo.innerHTML += `<p>Vivendo em pais: ${time}`
+        if (time == "Brasil") {
+            virgo.innerHTML += '<p>Voce e Brasileiro</p>'
+        } else {
+            virgo.innerHTML += '<p>Voce e estrangeiro.</p>'
+        }
+    }
+    </script>
+</body>
+</html>
