@@ -60,11 +60,30 @@ input {
     background-color: #dceefb;
 }
 
+.num:hover {
+    background-color: #4b91bd;
+}
+
 #igual {
     background-color: #8fd694;
+}
+
+#igual:hover {
+    background-color: #c1ffc5;
 }
 
 #clear {
     background-color: #f08080;
 }
 
+#clear:hover {
+    background-color: #eca1a1;
+}
+
+#samp {
+    background-color: lightgray;
+}
+
+#samp:hover {
+    background-color: rgb(177, 177, 177);
+}
