@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador</title>
 </head>
 <body>
-    <input type="number" name="a" id="samp">
-    <input type="number" name="b" id="salame">
-    <input type="number" name="sas" id="suco">
-    <input type="button" value="Samp" id="calc" onclick="calc()">
+    <input type="number" name="a" id="samp" placeholder="Início">
+    <input type="number" name="b" id="salame" placeholder="Fim">
+    <input type="number" name="sas" id="suco" placeholder="Passo">
+    <input type="button" value="Contar" id="calc">
     <p id="res">O resultado vai aparecer aqui</p>
+
     <script>
-        function calc() {
-        const n1 = document.getElementById("samp")
-        const n2 = document.getElementById("salame")
-        const inc = document.getElementById("suco")
-        const res = document.getElementById("res")
+        const btn = document.getElementById("calc");
 
-        if (n1.value == "" || n2.value == "" || inc.value == "" || Number(n1.value) === 0 || Number(n2.value) === 0 || Number(inc.value) === 0) {
-            window.alert("ERRO! FALTAM DADOS!")            
-        } else {
-            res.innerHTML = 'Contando... '
-            let i = Number(n1.value)
-            let f = Number(n2.value)
-            let p = Number(inc.value)
+        const calc = () => {
+            const n1 = document.getElementById("samp");
+            const n2 = document.getElementById("salame");
+            const inc = document.getElementById("suco");
+            const res = document.getElementById("res");
 
+            const i = Number(n1.value);
+            const f = Number(n2.value);
+            let p = Number(inc.value);
 
-            if (p <= 0) {
-                window.alert('PASSO INVALIDO! CONSIDERANDO 1')
-                p = 1
+            if (n1.value === "" || n2.value === "" || inc.value === "") {
+                window.alert("ERRO! FALTAM DADOS!");
+                return;
             }
 
+            if (p <= 0) {
+                window.alert('PASSO INVÁLIDO! CONSIDERANDO 1');
+                p = 1;
+            }
+
+            res.innerHTML = 'Contando... ';
 
             if (i < f) {
                 for (let c = i; c <= f; c += p) {
-                    res.innerHTML += `${c} `
+                    res.innerHTML += `${c} `;
                 }
-
-                
             } else {
                 for (let c = i; c >= f; c -= p) {
-                    res.innerHTML += `${c} `
+                    res.innerHTML += `${c} `;
                 }
             }
-        }
-    }
+        };
+
+        btn.addEventListener("click", calc);
     </script>
 </body>
 </html>
