@@ -25,14 +25,20 @@
             let i = Number(n1.value)
             let f = Number(n2.value)
             let p = Number(inc.value)
+
+
             if (p <= 0) {
                 window.alert('PASSO INVALIDO! CONSIDERANDO 1')
                 p = 1
             }
+
+
             if (i < f) {
                 for (let c = i; c <= f; c += p) {
                     res.innerHTML += `${c} `
                 }
+
+                
             } else {
                 for (let c = i; c >= f; c -= p) {
                     res.innerHTML += `${c} `
