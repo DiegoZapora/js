@@ -6,7 +6,7 @@
     <title>aaaa</title>
 </head>
 <body>
-    
+
 </body>
 <script>
     var nome = window.prompt('Digite seu nome: ');
@@ -14,6 +14,10 @@
     var n2 = Number(window.prompt('Qual a segunda nota? '));
     var n3 = Number(window.prompt('Qual a terceira nota? '));
     var media = (n1 + n2 + n3) / 3;
-    media >= 6 ? document.write(`Parabens, ${nome}. sua media foi ${media} e voce esta APROVADO!`) : document.write(`${nome}, sua nota foi ${media} e voce esta REPROVADO!`);
+    if (media < 6) {
+       document.write(`SEU LIXO, ${nome}. Sua media foi de: ${media} e voce esta REPROVADO!`) 
+    } else {
+        document.write(`PARABENS! ${nome}. Sua media foi de: ${media} e voce esta APROVADO!`)
+    }
     </script>
 </html>
